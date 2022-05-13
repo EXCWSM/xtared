@@ -432,7 +432,7 @@
 	   (< 0 (length items))
 	   (progn
 	     (message "~A" (get-buffer-alternate-file-name))
-	     (y-or-n-p "Delete ~A? " (if (= 1 (length items))
+	     (y-or-n-p "Delete ~A ?" (if (= 1 (length items))
 					 (car items)
 				       (format nil "[~D items]" (length items))))))
       (long-operation (apply 'delete-file-in-archive (append (list (get-buffer-alternate-file-name)) items)))))
